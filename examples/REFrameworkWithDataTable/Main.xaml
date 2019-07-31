@@ -1,0 +1,66 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="412,1144.66666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uc="clr-namespace:UiPath.CustomReFramework;assembly=UiPath.CustomReFramework" xmlns:uca="clr-namespace:UiPath.CustomReFramework.Activities;assembly=UiPath.CustomReFramework.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="372,1024.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uca:ReFramework CloseAllApplicationsWF="{x:Null}" ConfigFileAsJSON="{x:Null}" HandleEachExceptionWF="{x:Null}" InitAllApplicationsWF="{x:Null}" KillAllProcessesWF="{x:Null}" QueueItemStatuses="{x:Null}" AdditionalConfigs="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;Table1&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;Table1&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Name&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Value&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Description&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;Table1&gt;&#xA;    &lt;Name&gt;InReportName&lt;/Name&gt;&#xA;    &lt;Value&gt;Data\ReportIn.xlsx&lt;/Value&gt;&#xA;  &lt;/Table1&gt;&#xA;  &lt;Table1&gt;&#xA;    &lt;Name&gt;OutReportName&lt;/Name&gt;&#xA;    &lt;Value&gt;Data\ReportOut.xlsx&lt;/Value&gt;&#xA;  &lt;/Table1&gt;&#xA;&lt;/NewDataSet&gt;" sap2010:Annotation.AnnotationText="Simple example that shows how to use the activity when no Orchestrator/Queues are involved.&#xA;&#xA;The robot reads an Excel that has two columns (containing numbers) and tries to calculate the difference between the two columns. If the processing is succesful, the result is added to a third column. If any errors occur, a remark is added to the third column&#xD;&#xA;&#xD;&#xA;This example also shows &#xD;&#xA;- how to use ExtraConfigurations feature&#xD;&#xA;- how to pass variables between different workflows (see ProcessedReport created in InitTransactionData and used in EndProcess)" CloseExcel="True" ConfigFile="Data\Config.json" DisplayName="REFramework with DataTable" EndProcessWF="Framework\EndProcess.xaml" GetTransactionItemWF="Framework\GetTransactionItem.xaml" HandleTransactionStatusWF="Framework\HandleTransactionStatus.xaml" sap:VirtualizedContainerService.HintSize="350,900.666666666667" sap2010:WorkflowViewState.IdRef="ReFramework_1" InitTransactionData="Framework\InitTransactionData.xaml" ProcessTransactionWF="Framework\ProcessTransaction.xaml">
+      <uca:ReFramework.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </uca:ReFramework.Arguments>
+      <uca:ReFramework.Timeouts>
+        <uc:ConfigureWorkflowsTimeout TimeoutCloseAllApplications="-00:00:00.0010000" TimeoutEndProcess="-00:00:00.0010000" TimeoutGetTransactionItem="-00:00:00.0010000" TimeoutHandleEachException="-00:00:00.0010000" TimeoutHandleTransactionStatus="-00:00:00.0010000" TimeoutInitAllApplications="-00:00:00.0010000" TimeoutInitTransactionData="-00:00:00.0010000" TimeoutKillAllProcesses="-00:00:00.0010000" TimeoutProcessTransaction="-00:00:00.0010000" />
+      </uca:ReFramework.Timeouts>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uca:ReFramework>
+  </Sequence>
+</Activity>

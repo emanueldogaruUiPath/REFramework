@@ -1,0 +1,14 @@
+{
+    "Constants":
+	{
+		"MaxRetryNumber": 3,
+
+        "MaxInitRetryNumber": 3,
+        "MaxContinuousRetryNumber" : 7,
+	},
+	
+	"Settings":
+	{
+        "OrchestratorQueueName": "KibanaDemoQueue"
+	}
+}
