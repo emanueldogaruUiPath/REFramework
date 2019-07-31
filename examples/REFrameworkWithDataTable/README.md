@@ -8,3 +8,5 @@ This example also shows
 - how to use ExtraConfigurations feature
 - how to pass variables between different workflows (see ProcessedReport created in InitTransactionData and used in EndProcess)
 - how to use HandleTransactionStatus.xaml workflow
+
+The process was created in Studio 2019.4.
