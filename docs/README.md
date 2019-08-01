@@ -59,18 +59,18 @@ and TransactionItem type. Press Generate Samples button to generate xaml samples
 be generated in the folder named Framework only if the samples do not already exist.
 The following workflows are mandatory:
 - GetTransactionItem - with mandatory arguments:
--- in_TransactionNumber (Int32)
--- io_TransactionData
--- out_TransactionItem
+- - in_TransactionNumber (Int32)
+- - io_TransactionData
+- - out_TransactionItem
 - ProcessTransaction - with mandatory argument:
--- in_TransactionItem
+- - in_TransactionItem
 The other workflows are optional:
 - InitTransactionData - which should provide at least the mandatory argument: out_TransactionData
 - InitAllApplications
 - HandleTransactionStatus - with mandatory arguments:
--- in_TransactionItem
--- in_TransactionApplicationError (System.Exception)
--- in_TransactionBussinesError (UiPath.Core.BussinesRuleException)
+- - in_TransactionItem
+- - in_TransactionApplicationError (System.Exception)
+- - in_TransactionBussinesError (UiPath.Core.BussinesRuleException)
 - EndProcess
 - CloseAllApplications
 - KillAllProcesses
