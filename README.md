@@ -13,3 +13,21 @@ The goal of REFramework is to facilitate the development of business automations
 - logging capabilities
 
 Implemented as custom activity, the REFramework brings a new level of simplicity, a clearer separation of Business and Architecture layers and a centralized distribution model, while remaining fully compatible with classic REFramework.
+
+## Benefits
+
+- Fully compatibility with Classic Reframework
+- Reusability
+- Centralized code (as library)
+- Real separation between Architecture and Process Layer
+- Hides complexity from entry-level users, while providing the same functionality
+- Easier to deal with workflow arguments type
+- Samples generation
+- Edit config arguments directly from UiPath
+- Config file from json file
+- Config file from asset
+- Enforce argument naming convention (potential even more enforcing of best practices)
+- Separation of InitTransactionData and InitAllApplications
+- New hooks (EndProcess, HandleTransactionStatus, HandleEachException)
+- Timeouts parameter for each workflow
+- More granularity regarding queue items
