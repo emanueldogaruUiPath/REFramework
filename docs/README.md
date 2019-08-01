@@ -14,7 +14,7 @@ functionalities out of box, such as:
 
 The REFramework is very well suited for iterative processes, where the data can be splitted into several data. That is reason the REFrameworl is built around TransactionData (the entire data to be processed) and TransactionItem (chunk of data to be processed during one iteration).
 
-As seen in the diagram, the flow of the activity is the following:
+As seen in the diagram https://github.com/emanueldogaruUiPath/REFramework/blob/master/docs/Architecture%20REFramework.png the flow of the activity is the following:
 1) the config file and the extra configurations are retrieved. From this point on every workflow can define an
 argument in_Config and use said configurations
 2) the in/io arguments are retrieved. From this point on every workflow can access these data by defining an
@@ -123,3 +123,12 @@ b) Applications exceptions - in this case ProcessTransaction is retried accordin
 3) Exceptions that are thrown in any other xaml file after the retry mechanism failed to recover. They are saved in
 the global object GeneralException that can be accessed from the step EndProcess (and all others that follow)
 
+
+## using Queue Item Statuses feature
+
+There are situations when the processing that has to be done to a single item queue become too complex to be treated individually into ProcessTransaction workflow. Imagine a document processing automation where for each document one has to digitize document, validate digitization, process document, etc. In this case, if the entire processing of a queue would be done in single iteration in ProcessTransaction and an error occured during one of the last steps, during the retry, all initials steps that have been succesfully  would have to be redone. This, of course, is not optimal and too time consuming. To address this issue, we implemented a feature named Queue Item Statuses that works as following:
+- first we split the processing that has to be done to queue in several steps: eg. digitize, validate, process. This steps should be defined as an array of strings in option Queue Item Statuses.
+- in ProcessTransaction we define actions that should be taken for each item at every step. We can differentiate the current step by using the input argument in_TransactionStatus
+- once the REFramework starts, every item retrieved is processed in first associated step (eg. digitize). If the processing is succesful, REFramework will add a new queue item that has in its ItemInformation a next status that needs processing (eg. validate). This goes on until every queue item is processed at every step. 
+
+For a practical example please take a look at the demo  https://github.com/emanueldogaruUiPath/REFramework/tree/master/examples/REFrameworkWithQueuesAdvanced
