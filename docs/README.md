@@ -124,7 +124,7 @@ b) Applications exceptions - in this case ProcessTransaction is retried accordin
 the global object GeneralException that can be accessed from the step EndProcess (and all others that follow)
 
 
-## using Queue Item Statuses feature
+## Using Queue Item Statuses feature
 
 There are situations when the processing that has to be done to a single item queue become too complex to be treated individually into ProcessTransaction workflow. Imagine a document processing automation where for each document one has to digitize document, validate digitization, process document, etc. In this case, if the entire processing of a queue would be done in single iteration in ProcessTransaction and an error occured during one of the last steps, during the retry, all initials steps that have been succesfully  would have to be redone. This, of course, is not optimal and too time consuming. To address this issue, we implemented a feature named Queue Item Statuses that works as following:
 - first we split the processing that has to be done to queue in several steps: eg. digitize, validate, process. This steps should be defined as an array of strings in option Queue Item Statuses.
