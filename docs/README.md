@@ -53,54 +53,54 @@ exception occurs in any workflow. This facilitates exception handling at any lev
 ## How to use it 
 
 The package contains only the REFramework activity which should be used as following:
-• Add the activity to the workflow
-• If needed, expand Utilities pane from the bottom of the activity and select TransactionData type
+- Add the activity to the workflow
+- If needed, expand Utilities pane from the bottom of the activity and select TransactionData type
 and TransactionItem type. Press Generate Samples button to generate xaml samples files. The samples will
 be generated in the folder named Framework only if the samples do not already exist.
 The following workflows are mandatory:
-• GetTransactionItem - with mandatory arguments:
-o in_TransactionNumber (Int32)
-o io_TransactionData
-o out_TransactionItem
-• ProcessTransaction - with mandatory argument:
-o in_TransactionItem
+- GetTransactionItem - with mandatory arguments:
+- - in_TransactionNumber (Int32)
+- - io_TransactionData
+- - out_TransactionItem
+- ProcessTransaction - with mandatory argument:
+- - in_TransactionItem
 The other workflows are optional:
-• InitTransactionData - which should provide at least the mandatory argument: out_TransactionData
-• InitAllApplications
-• HandleTransactionStatus - with mandatory arguments:
-o in_TransactionItem
-o in_TransactionApplicationError (System.Exception)
-o in_TransactionBussinesError (UiPath.Core.BussinesRuleException)
-• EndProcess
-• CloseAllApplications
-• KillAllProcesses
-• HandleEachException
+- InitTransactionData - which should provide at least the mandatory argument: out_TransactionData
+- InitAllApplications
+- HandleTransactionStatus - with mandatory arguments:
+- - in_TransactionItem
+- - in_TransactionApplicationError (System.Exception)
+- - in_TransactionBussinesError (UiPath.Core.BussinesRuleException)
+- EndProcess
+- CloseAllApplications
+- KillAllProcesses
+- HandleEachException
 
 ### Workflow arguments considerations
 Besides the mandatory arguments every workflow can use the following arguments
-• in_Config : Dictionary<string, string>
-• in_TransactionNumber : Int32 initialized at the beginning of the REFramework with 0 and incremented
+- in_Config : Dictionary<string, string>
+- in_TransactionNumber : Int32 initialized at the beginning of the REFramework with 0 and incremented
 automatically according to the associated diagramme.
-• in_TransactionData
-• in_GeneralException
+- in_TransactionData
+- in_GeneralException
 
 Moreover, additional to the arguments predefined, one can create any number of custom variables that will flow
 through the framework as following:
-• first the variable must be defined in a workflow as an output argument (for example out_customArgument)
-• once defined, every other workflow that follows can access the variable as in or io argument:
+- first the variable must be defined in a workflow as an output argument (for example out_customArgument)
+- once defined, every other workflow that follows can access the variable as in or io argument:
 in_customArgument or io_customArgument. The only requirement is to keep the same name of the
 variable.
 One can exchange data outside the REFramework by using the Arguments window (see button Edit Arguments):
-• the in/io arguments are accessible to any workflow. For example if we define an in argument named in_arg1
+- the in/io arguments are accessible to any workflow. For example if we define an in argument named in_arg1
 any workflow can access it by defining an input argumentwith the same name
-• similarly, the output argument can be defined in any workflow during the process
+- similarly, the output argument can be defined in any workflow during the process
 Regarding the arguments, one must pay attention to keep consistency between the arguments' type.
 
 ## ProcessConfiguration
 
 One can optionally use a config file to define modifiable parameters. Such a config file can be obtained by pressing
 the button Generate Config which will create an Excel and a JSON file in the folder Data (attention if the config file already exists
-it will not be overwritten). All the configurations can be accessed through the in_Config variable. Moreover, one can import the config file directly from an asset. using the option Config Asset as JSON.
+it will not be overwritten). All the configurations can be accessed through the in_Config variable. Moreover, one can import the config file directly from an asset using the option Config Asset as JSON.
 
 The Extra Configurations feature can be used to override the config file, i.e. a configuration from Extra Configuration
 table has priority over the same configuration from the Excel file.
