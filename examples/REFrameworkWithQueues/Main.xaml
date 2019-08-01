@@ -1,0 +1,62 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="412,925.333333333333" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uc="clr-namespace:UiPath.CustomReFramework;assembly=UiPath.CustomReFramework" xmlns:uca="clr-namespace:UiPath.CustomReFramework.Activities;assembly=UiPath.CustomReFramework.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="A simple example that shows how to use REFramework with Orchestrator and Queues&#xD;&#xA;&#xD;&#xA;The example also demonstrate &#xD;&#xA;- how to easily create a report with statuses for each transaction&#xD;&#xA;- how ApplicationException and BusinessRuleException are treated differently. Note that after an ApplicationException is thrown the REFramework closes all applications and restarts InitAllApplications" DisplayName="REFramework with queues" sap:VirtualizedContainerService.HintSize="372,845.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uca:ReFramework ConfigFileAsJSON="{x:Null}" HandleEachExceptionWF="{x:Null}" QueueItemStatuses="{x:Null}" AdditionalConfigs="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;Table1&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;Table1&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Name&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Value&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Description&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;Table1&gt;&#xD;&#xA;    &lt;Name&gt;OutReport&lt;/Name&gt;&#xD;&#xA;    &lt;Value&gt;Data\ReportLogs.xlsx&lt;/Value&gt;&#xD;&#xA;  &lt;/Table1&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" CloseAllApplicationsWF="Framework\CloseAllApplications.xaml" CloseExcel="True" ConfigFile="Data\Config.xlsx" DisplayName="Robotic Entreprise Framework" EndProcessWF="Framework\EndProcess.xaml" GetTransactionItemWF="Framework\GetTransactionItem.xaml" HandleTransactionStatusWF="Framework\HandleTransactionStatus.xaml" sap:VirtualizedContainerService.HintSize="350,542.666666666667" sap2010:WorkflowViewState.IdRef="ReFramework_1" InitAllApplicationsWF="Framework\InitAllApplications.xaml" InitTransactionData="Framework\InitTransactionData.xaml" KillAllProcessesWF="Framework\KillAllProcesses.xaml" ProcessTransactionWF="Framework\ProcessTransaction.xaml">
+      <uca:ReFramework.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </uca:ReFramework.Arguments>
+      <uca:ReFramework.Timeouts>
+        <uc:ConfigureWorkflowsTimeout TimeoutCloseAllApplications="-00:00:00.0010000" TimeoutEndProcess="-00:00:00.0010000" TimeoutGetTransactionItem="-00:00:00.0010000" TimeoutHandleEachException="-00:00:00.0010000" TimeoutHandleTransactionStatus="-00:00:00.0010000" TimeoutInitAllApplications="-00:00:00.0010000" TimeoutInitTransactionData="-00:00:00.0010000" TimeoutKillAllProcesses="-00:00:00.0010000" TimeoutProcessTransaction="-00:00:00.0010000" />
+      </uca:ReFramework.Timeouts>
+    </uca:ReFramework>
+  </Sequence>
+</Activity>
