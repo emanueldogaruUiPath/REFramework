@@ -5,6 +5,8 @@ The library can be installed from Go (https://go.uipath.com/component/reframewor
 
 The library should work with UiPath 2018.4 and later
 
+Check full documentation at: https://github.com/emanueldogaruUiPath/REFramework/tree/master/docs
+
 ## Overview
 The goal of REFramework is to facilitate the development of business automations by providing a ready-to-use, well-tested, off-the-shelf architecture. Without having to worry about the robot architecture, the developer can focus on the business process to implement, while REFramework takes care of important topics such as: 
 - exception handling 
